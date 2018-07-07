@@ -5,11 +5,6 @@ import Thumbnail from './Thumbnail.jsx';
 import Macy from 'macy';
 
 export default class Thumbnails extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-		}
-	}
 
 	componentDidUpdate(){
 		let macy = Macy({
@@ -23,8 +18,13 @@ export default class Thumbnails extends React.Component {
 			container: '#thumbnails',
 			margin: 0,
 			mobileFirst: false,
-			trueOrder: true
+			trueOrder: true,
+			waitForImages: true
 		});
+		macy.runOnImageLoad( () => {
+			macy.recalculate(true);
+		}, true ); 
+
 	}
 
 	render() {

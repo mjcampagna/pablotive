@@ -13,11 +13,20 @@ const unsplash = new Unsplash.default({
   secret: "82e34eae22dde93272cd627656e8780acb56efd6de20efc41ffce644c6705f24"
 });
 
-app.get('/unsplash', ( req, res ) => {
-	unsplash.search.photos('ocean', 1)
+app.get('/unsplash/latest', ( req, res ) => {
+	unsplash.photos.listCuratedPhotos(1, 25, 'latest')
 	.then(Unsplash.toJson)
 	.then(json => {
+		console.log(json)
 		res.status(200).send(json);
+	});
+});
+
+app.get('/unsplash/search/:query', ( req, res ) => {
+	unsplash.search.photos(req.params.query, 1, 25)
+	.then(Unsplash.toJson)
+	.then(json => {
+		res.status(200).send(json.results);
 	});
 });
 

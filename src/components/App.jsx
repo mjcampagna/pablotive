@@ -1,25 +1,35 @@
 import React from 'react';
 
+import Search from './Search.jsx';
 import Thumbnails from './Thumbnails.jsx';
 
 export default class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			results: [],
-			total: 0,
-			total_pages: 0
+			query: 'latest',
+			results: []
 		}
+		this.queryUnsplash = this.queryUnsplash.bind(this);
 	}
 
-	componentDidMount() {
-		fetch('/unsplash')
+	queryUnsplash(query) {
+		fetch('/unsplash/search/' + query)
 		.then( res => res.json() )
 		.then( json => {
 			this.setState({
-				results: json.results,
-				total: json.total,
-				total_pages: json.total_pages
+				query: query,
+				results: json
+			})
+		})
+	}
+
+	componentDidMount() {
+		fetch('/unsplash/latest')
+		.then( res => res.json() )
+		.then( json => {
+			this.setState({
+				results: json
 			})
 		})
 	}
@@ -27,6 +37,10 @@ export default class App extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
+				<header>
+					<h1>{this.state.query}</h1>
+					<Search search={this.queryUnsplash} />
+				</header>
 				<Thumbnails images={this.state.results} />
 			</React.Fragment>
 		);	
