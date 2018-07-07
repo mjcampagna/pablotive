@@ -1,0 +1,42 @@
+{
+  "name": "something-wicked",
+  "version": "1.0.0",
+  "description": "... this way comes ...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "del-cli dist -f",
+    "dev": "webpack --mode=development --watch",
+    "build": "npm run prebuild -s && webpack --mode=production -s"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjcampagna/something-wicked.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjcampagna/something-wicked/issues"
+  },
+  "homepage": "https://github.com/mjcampagna/something-wicked#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "del-cli": "^1.1.0",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.0"
+  }
+}
