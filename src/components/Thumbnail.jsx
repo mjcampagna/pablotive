@@ -5,11 +5,17 @@ export default class Thumbnail extends React.Component {
 		super(props);
 	}
 
+	handleClickOnImage(e) {
+		e.preventDefault();
+	}
+
 	render() {
 		return (
-			<img 
+			<a href="#" 
+				onClick={(e)=>this.handleClickOnImage(e)}
+			><img 
 				src={this.props.image.urls.thumb}  
-			/>
+			/></a>
 		);	
 	}
 

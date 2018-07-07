@@ -23,14 +23,15 @@ img {
 #thumbnails {
 	margin: 1.5rem auto;
 	max-width: 1140px;
+	padding: 3px;
+}
 
-	/* display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	justify-content: center; */
-
+#thumbnails a {
+	box-sizing: border-box;
+	padding: 3px;
+	text-align: center;
 }
 
 #thumbnails img {
-
+	vertical-align: top;
 }

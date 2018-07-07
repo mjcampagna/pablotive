@@ -14,16 +14,15 @@ export default class Thumbnails extends React.Component {
 	componentDidUpdate(){
 		let macy = Macy({
 			breakAt: {
-				992: {
-					columns: 4
-				},
-				1024: {
-					columns: 5
-				}
+				1030: 5,
+				824: 4,
+				618: 3,
+				412: 2
 			},
+			columns: 6,
 			container: '#thumbnails',
 			margin: 0,
-			mobileFirst: true,
+			mobileFirst: false,
 			trueOrder: true
 		});
 	}
