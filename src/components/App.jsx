@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Pablo from './Pablo.jsx';
 import Search from './Search.jsx';
 import Thumbnails from './Thumbnails.jsx';
 
@@ -38,10 +39,15 @@ export default class App extends React.Component {
 		return (
 			<React.Fragment>
 				<header>
-					<h1>{this.state.query}</h1>
+					<Pablo />
+					<h1>Pablo</h1>
 					<Search search={this.queryUnsplash} />
 				</header>
+
+				<h2>{this.state.query}</h2>
+
 				<Thumbnails images={this.state.results} />
+
 			</React.Fragment>
 		);	
 	}

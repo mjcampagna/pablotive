@@ -17,7 +17,6 @@ app.get('/unsplash/latest', ( req, res ) => {
 	unsplash.photos.listCuratedPhotos(1, 25, 'latest')
 	.then(Unsplash.toJson)
 	.then(json => {
-		console.log(json)
 		res.status(200).send(json);
 	});
 });

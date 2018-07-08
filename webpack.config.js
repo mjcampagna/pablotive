@@ -33,7 +33,7 @@ module.exports = {
             loader: 'url-loader',
             options: {
               limit: 8192,
-              name: '[path]/[name].[ext]',
+              name: 'assets/images/[name].[ext]',
               include: [/images/]
             }
           }
@@ -46,7 +46,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: '[path]/[name].[ext]',
+              name: 'assets/fonts/[name].[ext]',
               include: [/fonts/]
             }
           }
@@ -59,7 +59,7 @@ module.exports = {
   plugins: [
 
     new HtmlWebpackPlugin({
-      title: 'My App',
+      title: 'Pablo',
       template: 'src/index.html',
       inject: false
     }),

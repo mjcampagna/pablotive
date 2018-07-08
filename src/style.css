@@ -20,28 +20,45 @@ img {
 	height: auto;
 }
 
+@font-face {
+  font-family: "Marvin Visions";
+  src: url("./fonts/MarvinVisions-Bold.woff2") format("woff2"),
+       url("./fonts/MarvinVisions-Bold.woff") format("woff");
+}
+
+#app {
+	margin: 0 auto 72px;
+	max-width: 1140px;
+}
+
 header {
 	background-color: #2c2c2c;
 	border-bottom-left-radius: 3px;
 	border-bottom-right-radius: 3px;
 	box-sizing: border-box;
 	color: #ffffff;
-	margin: 0 auto 1.5rem;
-	max-width: 1140px;
-	padding: 6px 12px;
-
 	display: flex;
-	/* align-content: flex-start; */
+	margin: 0 auto 1.5rem;
+	padding: 6px;
+	position: relative;
+}
+
+header svg {
+	border-radius: 3px;
+	height: 34px;
+	position: absolute; top: 6px; left: 6px;
+	width: auto;
 }
 
 header h1 {
 	display: inline-block;
 	flex: 1 0 auto;
-	font-size: 1rem;
+	font-family: 'Marvin Visions';
+	font-size: 2rem;
 	font-weight: normal;
+	letter-spacing: 0.05em;
 	line-height: 2rem;
-	margin: 0;
-	text-transform: capitalize;
+	margin: 0 0 0 40px;
 	vertical-align: top;
 }
 
@@ -91,10 +108,16 @@ header h1 {
 	border-color: orange;
 }
 
+h2 {
+	font-size: 1rem;
+	margin: 0 auto;
+	max-width: 1140px;
+	text-transform: capitalize;
+}
+
 #thumbnails {
 	box-sizing: border-box;
 	margin: 1.5rem auto;
-	max-width: 1140px;
 	padding: 3px;
 }
 
