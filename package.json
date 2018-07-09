@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prebuild": "del-cli dist -f",
     "dev": "webpack --mode=development --watch",
-    "build": "npm run prebuild -s && webpack --mode=production -s"
+    "build": "npm run prebuild -s && webpack --mode=production -s",
+    "start": "node server"
   },
   "repository": {
     "type": "git",
