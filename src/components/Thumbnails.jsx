@@ -30,7 +30,7 @@ export default class Thumbnails extends React.Component {
 	render() {
 		const thumbnails = this.props.images.map( image => {
 			return (
-				<Thumbnail image={image} key={image.id} />
+				<Thumbnail image={image} key={image.id} getImage={this.props.getImage} toggleModal={this.props.toggleModal} />
 			);
 		});
 		return (

@@ -7,6 +7,7 @@ export default class Thumbnail extends React.Component {
 
 	handleClickOnImage(e) {
 		e.preventDefault();
+		this.props.getImage( e.target.id, this.props.toggleModal );
 	}
 
 	render() {
@@ -14,6 +15,7 @@ export default class Thumbnail extends React.Component {
 			<a href="#" 
 				onClick={(e)=>this.handleClickOnImage(e)}
 			><img 
+				id={this.props.image.id} 
 				src={this.props.image.urls.thumb}  
 			/></a>
 		);	

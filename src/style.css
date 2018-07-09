@@ -15,6 +15,10 @@ body {
   padding: 0;
 }
 
+body.overflow-hidden {
+	overflow: hidden;
+}
+
 img {
 	max-width: 100%;
 	height: auto;
@@ -27,8 +31,9 @@ img {
 }
 
 #app {
-	margin: 0 auto 72px;
+	margin: 0 auto;
 	max-width: 1140px;
+	padding-bottom: 72px;
 }
 
 header {
@@ -112,12 +117,13 @@ h2 {
 	font-size: 1rem;
 	margin: 0 auto;
 	max-width: 1140px;
+	padding: 0 3px;
 	text-transform: capitalize;
 }
 
 #thumbnails {
 	box-sizing: border-box;
-	margin: 1.5rem auto;
+	margin: 0.5rem auto 0;
 	padding: 3px;
 }
 
@@ -129,4 +135,92 @@ h2 {
 
 #thumbnails img {
 	vertical-align: top;
+}
+
+/* #modal {
+	align-items: center;
+	background-color: rgba(255,255,255,0.95);
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	opacity: 0;
+	position: fixed; top: 0; left: 0;
+	transition: 0.4s opacity ease-in-out;
+	visibility: hidden;
+	width: 0; height: 0;
+}
+
+#modal.modal-opacity,
+#modal.modal-on {
+	bottom: 0; right: 0;
+	visibility: visible;
+	width: auto; height: auto;
+}
+
+#modal.modal-opacity {
+	opacity: 1;
+}
+
+#modal.modal-on {
+	transition: 0s all ease 0.4s,
+		0.4s opacity ease-in-out 0s;
+} */
+
+#modal {
+	align-items: center;
+	background-color: rgba(255,255,255,0.98);
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: top;
+	opacity: 1;
+	position: fixed; top: 0; left: 0; bottom: 0; right: 0;
+	transition: 0.4s opacity ease-in-out;
+	visibility: visible;
+	width: auto; height: auto;
+}
+
+#modal-header {
+	border-bottom: 1px solid black;
+	box-sizing: content-box;
+	flex: 0 0 auto;
+	width: 100%; height: 48px;
+}
+
+#modal-body {
+	display: flex;
+	flex: 1 0 auto;
+	width: 100%;
+}
+
+#modal-footer {
+	border-top: 1px solid black;
+	box-sizing: content-box;
+	flex: 0 0 auto;
+	width: 100%; height: 48px;
+}
+
+#modal-stage {
+	align-items: center;
+	box-sizing: border-box;
+	display: flex;
+	flex: 1 1 auto;
+	justify-content: center;
+	padding: 24px;
+}
+
+#modal-config {
+	border-left: 1px solid #ededed;
+	flex: 0 0 auto;
+	max-width: 256px;
+	min-width: 256px;
+}
+
+#closeBtn {
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	font-size: 0.875rem;
+	line-height: 48px;
+	outline: none;
 }
