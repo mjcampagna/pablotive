@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Primitiv from './Primitiv.jsx';
-
 import { imgSrcToBlob } from 'blob-util';
 import Canvas from "../primitive/canvas.js";
 import {Triangle, Rectangle, Ellipse} from "../primitive/shape.js";
@@ -239,7 +237,7 @@ export default class Modal extends React.Component {
 				</div>
 
 				<div id="modal-footer">
-					<p>by {this.props.image.user.name}; {this.props.image.location.title}</p>
+					<p>by {this.props.image.user.name}</p>
 				</div>
 			</div>
 		);	
