@@ -53,6 +53,7 @@ header svg {
 	height: 34px;
 	position: absolute; top: 6px; left: 6px;
 	width: auto;
+	z-index: 1;
 }
 
 header h1 {
@@ -178,6 +179,7 @@ h2 {
 	transition: 0.4s opacity ease-in-out;
 	visibility: visible;
 	width: auto; height: auto;
+	z-index: 2;
 }
 
 #modal-header,
@@ -215,6 +217,11 @@ h2 {
 	flex: 1 1 auto;
 	justify-content: center;
 	padding: 24px;
+	position: relative;
+}
+
+#primitiv-output {
+	position: absolute;
 }
 
 #modal-config {
