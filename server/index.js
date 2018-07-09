@@ -14,7 +14,7 @@ const unsplash = new Unsplash.default({
 });
 
 app.get('/unsplash/latest', ( req, res ) => {
-	unsplash.photos.listCuratedPhotos(1, 25, 'latest')
+	unsplash.photos.listPhotos(1, 25)
 	.then(Unsplash.toJson)
 	.then(json => {
 		res.status(200).send(json);
