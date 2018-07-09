@@ -59,7 +59,7 @@ module.exports = {
   plugins: [
 
     new HtmlWebpackPlugin({
-      title: 'Pablo',
+      title: 'Pablotive',
       template: 'src/index.html',
       inject: false
     }),

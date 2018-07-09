@@ -56,7 +56,7 @@ export default class App extends React.Component {
 
 				<header>
 					<Pablo />
-					<h1>Pablo</h1>
+					<h1>Pablotive</h1>
 					<Search search={this.searchUnsplash} />
 				</header>
 
