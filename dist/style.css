@@ -385,7 +385,7 @@ header {
 	box-sizing: border-box;
 	color: #ffffff;
 	display: flex;
-	margin: 0 auto 1.5rem;
+	margin: 0 3px 1.5rem;
 	padding: 6px;
 	position: relative;
 }
@@ -547,6 +547,7 @@ h2 {
 
 #modal-header #view-buttons {
 	border-left: 1px solid #ededed;
+	box-sizing: border-box;
 	display: inline-block;
 	text-align: center;
 	vertical-align: top;

@@ -25,7 +25,6 @@ app.get('/unsplash/image/:id', ( req, res ) => {
 	unsplash.photos.getPhoto(req.params.id)
 	.then(Unsplash.toJson)
 	.then(json => {
-		console.log(json);
 		res.status(200).send(json);
 	});
 });
